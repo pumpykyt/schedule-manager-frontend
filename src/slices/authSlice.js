@@ -1,8 +1,11 @@
 import {createSlice} from "@reduxjs/toolkit";
+import jwtDecode from "jwt-decode";
+
+const token = localStorage.getItem('token');
 
 const initialState = {
-    isAuthenticated: false,
-    isAdmin: false
+    isAuthenticated: !!token,
+    isAdmin: token ? jwtDecode(token).role === 'admin' : false
 }
 
 export const authSlice = createSlice({

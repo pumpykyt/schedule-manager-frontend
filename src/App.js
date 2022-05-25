@@ -8,6 +8,7 @@ import 'antd/dist/antd.min.css';
 import Nav from "./components/Nav";
 import HomePage from "./containers/HomePage";
 import {ToastContainer} from "react-toastify";
+import AdminPage from "./containers/AdminPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Nav/>
         <Routes>
           <Route exact path="/" element={<HomePage/>}/>
+          <Route exact path="/admin" element={<AdminPage/>}/>
         </Routes>
         <ToastContainer position="top-left" />
       </Router>

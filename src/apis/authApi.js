@@ -10,7 +10,7 @@ export const authApi = createApi({
     loginUser: builder.mutation({
       query: (model) => ({
         url: '/auth/login',
-        method: "POST",
+        method: 'POST',
         body: model,
       }),
       invalidatesTags: ['Auth'],
@@ -18,7 +18,7 @@ export const authApi = createApi({
     registerUser: builder.mutation({
         query: (model) => ({
           url: '/auth/register',
-          method: "POST",
+          method: 'POST',
           body: model,
         }),
         invalidatesTags: ['Auth'],
