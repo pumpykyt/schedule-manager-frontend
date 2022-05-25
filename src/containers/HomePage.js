@@ -1,8 +1,7 @@
 import Spline from "@splinetool/react-spline";
 import Fade from 'react-reveal/Fade';
-import {observer} from "mobx-react-lite";
 
-const HomePage = observer(() => {
+const HomePage = () => {
     return(
         <div className="home-page min-h-screen bg-gray-900">
             <div className="grid grid-cols-2 h-screen items-center container mx-auto">
@@ -27,6 +26,6 @@ const HomePage = observer(() => {
             </div>
         </div>
     );
-});
+};
 
 export default HomePage;
