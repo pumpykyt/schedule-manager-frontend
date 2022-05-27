@@ -6,16 +6,24 @@ import { MdLogin } from 'react-icons/md';
 import {useState} from "react";
 import {Modal} from "antd";
 import { useLoginUserMutation } from "../apis/authApi";
+import {useDispatch} from "react-redux";
+import {setIsAdmin, setIsAuthenticated} from "../slices/authSlice";
+import jwtDecode from "jwt-decode";
 
 const Nav = props => {
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [loginModel, setLoginModel] = useState(null);
     const [login, { isLoading, isSuccess }] = useLoginUserMutation();
-
+    const dispatch = useDispatch();
 
     const handleLogin = () => {
         login(loginModel)
-        .then(result => console.log(result))
+        .then(result => {
+            console.log(result);
+            dispatch(setIsAuthenticated(true));
+            dispatch(setIsAdmin(jwtDecode(result.data.token).role === 'admin'));
+            localStorage.setItem('token', result.data.token);
+        })
         .catch(error => console.log(error));
     }
 
