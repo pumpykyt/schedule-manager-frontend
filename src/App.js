@@ -9,6 +9,7 @@ import Nav from "./components/Nav";
 import HomePage from "./containers/HomePage";
 import {ToastContainer} from "react-toastify";
 import AdminPage from "./containers/AdminPage";
+import ScheduleList from "./containers/ScheduleList";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage/>}/>
           <Route exact path="/admin" element={<AdminPage/>}/>
+          <Route exact path="/schedules" element={<ScheduleList/>}/>
         </Routes>
         <ToastContainer position="top-left" />
       </Router>
