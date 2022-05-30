@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import 'antd/dist/antd.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 import Nav from "./components/Nav";
 import HomePage from "./containers/HomePage";
 import {ToastContainer} from "react-toastify";
