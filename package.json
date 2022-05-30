@@ -24,6 +24,7 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^9.0.1",
     "tailwindcss": "^3.0.24",
+    "use-react-router-breadcrumbs": "^3.2.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
