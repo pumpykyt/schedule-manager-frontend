@@ -1,5 +1,4 @@
 const Nav = props => {
-
     return(
         <div className="nav w-full fixed">
             <div className="flex flex-row flex-wrap-nowrap justify-between container mx-auto gap-x-20 items-center py-3">

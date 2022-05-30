@@ -10,6 +10,7 @@ import HomePage from "./containers/HomePage";
 import {ToastContainer} from "react-toastify";
 import AdminPage from "./containers/AdminPage";
 import ScheduleList from "./containers/ScheduleList";
+import LoginPage from "./containers/LoginPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/" element={<HomePage/>}/>
           <Route exact path="/admin" element={<AdminPage/>}/>
           <Route exact path="/schedules" element={<ScheduleList/>}/>
+          <Route exact path="/login" element={<LoginPage/>}/>
         </Routes>
         <ToastContainer position="top-left" />
       </Router>

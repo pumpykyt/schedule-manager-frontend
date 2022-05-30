@@ -13,6 +13,7 @@
     "autoprefixer": "^10.4.7",
     "axios": "^0.27.2",
     "dotenv": "^16.0.1",
+    "formik": "^2.2.9",
     "jwt-decode": "^3.1.2",
     "postcss": "^8.4.14",
     "react": "^18.1.0",
@@ -25,7 +26,8 @@
     "react-toastify": "^9.0.1",
     "tailwindcss": "^3.0.24",
     "use-react-router-breadcrumbs": "^3.2.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
